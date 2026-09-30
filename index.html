@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="theme-color" content="#6f42c1">
+<title>Happy Birthday Khushi 💜</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="background"></div><div id="hearts"></div>
+<div id="secretHeart" title="Tap 7 times">💜</div>
+
+<div id="secretMessage" class="overlay">
+  <div class="glass secret-card">
+    <div class="bts-badge">💜 SECRET 7</div>
+    <h2>A Secret Message</h2>
+    <p>Billu Jii 💜<br><br>Some people make ordinary days feel special just by being there. I hope your life is always full of happiness, peace, love and beautiful surprises. Appi, aap mere liye bahut precious ho. ❤️
+Shayad maine kabhi properly words mein nahi bataya, lekin maine ek friend mein badi behen ka jo pyaar, care aur apnapan paaya hai, woh mere liye bahut special hai. Aap hamesha mera saath deti ho, meri galti par mujhe daantti ho, kabhi maarti bhi ho 😭😂, lekin us sab mein bhi mujhe hamesha ek Appi ka pyaar hi feel hua hai.
+Main genuinely bahut lucky aur khush hoon ki meri life mein aap ho. Bhale hi is janam mein main aapka saga bhai nahi hoon, lekin dil se maine aapko hamesha apni sagi Appi hi maana hai. Mere liye ye rishta khoon se nahi, dil se bana hai. 🫂❤️
+Aur Appi, kabhi bhi life mein koi pareshani ho, koi dukh ho, mann heavy ho ya bas kisi ki zarurat ho… apne is bhai ko zaroor yaad karna. Main aapse chhota hoon, shayad har problem solve na kar paun, lekin aapke saath khada rehne mein kabhi peeche nahi hatunga. Aapki khushi mein khush aur aapke bure waqt mein aapke saath rehna mere liye kabhi burden nahi hoga.
+Aur ek baat… maine rebirth ke baare mein suna hai. Mujhe nahi pata ye sach hai ya nahi, lekin agar sach mein dobara janam hota hai na, toh meri ek chhoti si wish hogi — agle janam mein main aapka saga bhai bankar aana chahta hoon. 🥹❤️ Phir shayad mujhe ye kehne ki zarurat hi na pade ki “aap meri Appi ho”, kyunki tab ye rishta duniya bhi kahegi aur khoon bhi.
+Is janam mein aap meri chosen Appi ho, aur agar agla janam hua… toh main aapka wahi chhota sa bhai banna chahta hoon. ❤️♾️
+Bas hamesha khush rehna, apni smile kabhi mat khona, aur yaad rakhna — aapka ye chhota bhai, chahe kitna bhi door ho, aapke liye hamesha yahin rahega. 🫂💜
+Happy Birthday, meri Appi… meri Billu Jii. ❤️🎂
+Love you, Appi. Always. ♾️ 💜</p>
+    <button onclick="closeSecret()">Close 💜</button>
+  </div>
+</div>
+
+<section id="loading" class="page active">
+  <div class="glass hero-card">
+    <div class="sparkle">✦ 💜 ✦</div>
+    <p class="eyebrow">A LITTLE BIRTHDAY SURPRISE</p>
+    <h1>For My<br><span>Billu Jii</span> 🎂</h1>
+    <p>Today is all about <strong>Khushi</strong> — because that's exactly what your name means. 💜</p>
+    <button id="continueBtn">Open Surprise 💜</button>
+  </div>
+</section>
+
+<section id="password" class="page">
+  <div class="glass compact-card">
+    <div class="lock">🔐</div>
+    <p class="eyebrow">PRIVATE SURPRISE</p>
+    <h2>Secret Access</h2>
+    <p>This little birthday world is only for<br><strong>Billu Jii</strong> 💜</p>
+    <input type="password" id="passInput" placeholder="Enter Secret Code" autocomplete="off">
+    <button id="unlockBtn">Unlock 💜</button>
+    <p id="error"></p>
+  </div>
+</section>
+
+<section id="intro" class="page">
+  <div class="glass compact-card">
+    <div class="sparkle">💜 ✨ 💜</div>
+    <h1 id="typing"></h1>
+    <p class="tiny">A little journey made especially for you.</p>
+    <button id="startMemory">Start Memories 📸</button>
+  </div>
+</section>
+
+<section id="gallery" class="page">
+  <audio id="music" loop><source src="Song/sanam.mp3" type="audio/mpeg"></audio>
+  <div class="glass gallery-card">
+    <div class="section-kicker">MEMORIES</div>
+    <h2>Beautiful Moments 💜</h2>
+    <div class="slider" id="memorySlider">
+      <img src="Images/photo1.jpg" alt="Memory 1"><img src="Images/photo2.jpg" alt="Memory 2"><img src="Images/photo3.jpg" alt="Memory 3"><img src="Images/photo4.jpg" alt="Memory 4"><img src="Images/photo5.jpg" alt="Memory 5"><img src="Images/photo6.jpg" alt="Memory 6"><img src="Images/photo7.jpg" alt="Memory 7"><img src="Images/photo8.jpg" alt="Memory 8"><img src="Images/photo9.jpg" alt="Memory 9"><img src="Images/photo10.jpg" alt="Memory 10">
+    </div>
+    <div class="dots" id="dots"></div>
+    <button id="nextBtn">There's More 💌</button>
+  </div>
+</section>
+
+<section id="letter" class="page">
+  <div class="glass letter-card">
+    <div class="section-kicker">FROM THE HEART</div>
+    <h2>For My Billu Jii 💜</h2>
+    <p id="letterText"></p>
+    <button id="btsBtn">Your BTS Surprise ✨</button>
+  </div>
+</section>
+
+<section id="bts" class="page">
+  <div class="bts-shell">
+    <div class="army-pill">💜 ARMY BIRTHDAY SURPRISE</div>
+    <h2 class="bts-title">Seven Cards.<br>Seven Birthday Wishes.</h2>
+    <p class="bts-note">A fan-made birthday surprise for Khushi / Billu Jii. Swipe or use the arrows. 💜</p>
+
+    <div class="card-stage">
+      <button class="nav prev" id="prevCard" aria-label="Previous card">‹</button>
+      <article class="wish-card" id="wishCard">
+        <div class="card-topline"><span>HAPPY BIRTHDAY</span><span id="cardNo">01 / 07</span></div>
+        <div class="photo-frame" id="photoFrame">
+          <img id="memberPhoto" src="BTS/rm.jpg" alt="RM">
+          <div class="photo-fallback" id="photoFallback">RM</div>
+        </div>
+        <div class="member-script" id="memberLabel">RM</div>
+        <h3 id="memberFullName">KIM NAMJOON</h3>
+        <div class="wish-divider">✦ ✦ ✦</div>
+        <p class="wish-text" id="wishText"></p>
+        <div class="card-bottom"><span>FOR BILLU JII 💜</span><span>ARMY</span></div>
+      </article>
+      <button class="nav next" id="nextCard" aria-label="Next card">›</button>
+    </div>
+
+    <div class="card-dots" id="cardDots"></div>
+    <p class="swipe-hint">Swipe the card • <span id="cardProgress">1 of 7</span></p>
+    <button id="finalBtn" class="final-unlock" disabled>View All 7 Wishes 🔒</button>
+    <p class="fan-note">Fan-made concept — not an actual message from BTS.</p>
+  </div>
+</section>
+
+<section id="final" class="page">
+  <div class="glass final-card">
+    <div class="big-heart">💜</div>
+    <div class="sparkle">✦ ✦ ✦</div>
+    <h1>Happy Birthday</h1>
+    <h2>Khushi<br><span>My Billu Jii 🎂</span></h2>
+    <p>May Allah always keep you happy, protect you, bless your life and fill your days with beautiful moments.</p>
+    <p class="ameen">Ameen 🤲🏻💜</p>
+    <p class="footer-note">Keep smiling. Keep shining. Always. ✨</p>
+  </div>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
